@@ -1,6 +1,7 @@
 // Import stylesheets
 import './style.css';
 import './arrayPolyfill.js';
+import './promisePolyfill.js';
 // Write Javascript code!
 const appDiv = document.getElementById('app');
 appDiv.innerHTML = `<h1> JS Polyfills</h1>`;
@@ -23,9 +24,13 @@ filteredArr.myForEach((el) => {
 
 console.log(updatedArr);
 
-const sum = newArr.myReduce((prev, curr) => {
-  console.log(prev, curr);
-  const total = prev + curr;
+const objArr = [
+  { item: 'pen', price: 100 },
+  { item: 'notebook', price: 200 },
+];
+
+const sum = objArr.myReduce((prev, curr) => {
+  const total = prev + curr.price;
   return total;
 }, 0);
 
