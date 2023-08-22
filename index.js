@@ -2,6 +2,7 @@
 import './style.css';
 import './arrayPolyfill.js';
 import './promisePolyfill.js';
+import './asyncPolyfill.js';
 // Write Javascript code!
 const appDiv = document.getElementById('app');
 appDiv.innerHTML = `<h1> JS Polyfills</h1>`;
