@@ -38,3 +38,20 @@ Array.prototype.myReduce = function (func, initialVal) {
   }
   return prevVal;
 };
+
+//flatten array polyfill
+const array = [1, 2, 3, 4, [3, 4, 5], [[1, 2, 3], 4, 5]];
+
+Array.prototype.flatten = function () {
+  let arr1 = [];
+  for (let i = 0; i < this.length; i++) {
+    if (Array.isArray(this[i])) {
+      arr1 = arr1.concat(this.flatten.call(this[i]));
+    } else {
+      arr1.push(this[i]);
+    }
+  }
+  return arr1;
+};
+
+console.log('Flatten array - ', array.flatten());
