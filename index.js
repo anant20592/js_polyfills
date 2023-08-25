@@ -5,6 +5,7 @@ import './promisePolyfill.js';
 import './asyncPolyfill.js';
 import './thisPolyfill.js';
 import './memoize.js';
+import './events.js';
 // Write Javascript code!
 const appDiv = document.getElementById('app');
 appDiv.innerHTML = `<h1> JS Polyfills</h1>`;
